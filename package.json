@@ -1,0 +1,34 @@
+{
+  "name": "quantity-measurement-app-frontend",
+  "version": "1.0.0",
+  "description": "Frontend application for quantity measurement",
+  "main": "js/script.js",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx live-server --port=3000",
+    "build": "echo 'No build step required for static frontend'",
+    "test": "echo 'No tests configured yet'"
+  },
+  "keywords": [
+    "quantity",
+    "measurement",
+    "frontend",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "krishna-gangrade",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^14.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krishna-gangrade/QuantityMeasurementApp-Frontend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/krishna-gangrade/QuantityMeasurementApp-Frontend/issues"
+  },
+  "homepage": "https://github.com/krishna-gangrade/QuantityMeasurementApp-Frontend#readme"
+}
