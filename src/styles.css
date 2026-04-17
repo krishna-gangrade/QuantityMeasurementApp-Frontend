@@ -1,8 +1,30 @@
-/* =============================================
-   Global Styles - Quantity Measurement App
-   Light Flat Design Theme
-   ============================================= */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+/* Import ngx-toastr CSS */
+@import 'ngx-toastr/toastr';
+
+:root {
+  /* Design Tokens - Black Green Theme */
+  --primary: #16a34a;
+  --primary-hover: #15803d;
+  --secondary: #22c55e;
+  --accent: #4ade80;
+  --background: #000000;
+  --surface: #0a0a0a;
+  --surface-hover: #0f1a12;
+  --inner-bg: #050505; /* Level 3 Background */
+  --text-main: #f0fdf4;
+  --text-muted: #86efac;
+  --error: #ef4444;
+  --success: #22c55e;
+  --border: #14532d;
+  
+  /* Dark Mode Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.55);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 24px -6px rgba(0, 0, 0, 0.5);
+  
+  --radius: 8px;
+  --radius-lg: 10px;
+}
 
 * {
   margin: 0;
@@ -11,15 +33,89 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #eef0f8;
-  color: #333;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--background);
+  color: var(--text-main);
+  min-height: 100vh;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
-input[type=number]::-webkit-outer-spin-button,
-input[type=number]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
 }
-input[type=number] { -moz-appearance: textfield; }
+
+/* Base Component Styles */
+input, select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--inner-bg);
+  color: var(--text-main);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+input::placeholder {
+  color: var(--text-muted);
+}
+
+input:focus, select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary);
+}
+
+button {
+  cursor: pointer;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--text-main);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background: var(--surface-hover);
+  border-color: var(--secondary);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+
+
+
+
+
+
+
